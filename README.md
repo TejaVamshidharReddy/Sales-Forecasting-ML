@@ -106,7 +106,7 @@ Product P001: $1,425.30 (±5% confidence interval)
 ## Contact / Let's Connect
 I'm always excited to discuss machine learning, data science projects, and collaboration opportunities!
 
-**Connect with me on LinkedIn**: [Teja Vamshidhar Reddy Chilukala](www.linkedin.com/in/tejavamshi)
+**Connect with me on LinkedIn**: [Teja Vamshidhar Reddy Chilukala](https://www.linkedin.com/in/tejavamshi/)
 
 Feel free to reach out for:
 - Project collaborations
