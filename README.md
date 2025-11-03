@@ -1,12 +1,7 @@
 # Sales-Forecasting-ML
 
-<!-- Badges Section -->
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Stars](https://img.shields.io/github/stars/TejaVamshidharReddy/Sales-Forecasting-ML?style=social)
-![Forks](https://img.shields.io/github/forks/TejaVamshidharReddy/Sales-Forecasting-ML?style=social)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
-
 ## Table of Contents
+
 - [Overview](#overview)
 - [Project Highlights](#project-highlights)
 - [Demo](#demo)
@@ -21,9 +16,11 @@
 - [Contact / Let's Connect](#contact--lets-connect)
 
 ## Overview
+
 Sales-Forecasting-ML is a machine learning project designed to predict future sales based on historical data. This project leverages advanced regression algorithms to help businesses make data-driven decisions, optimize inventory management, and improve revenue planning.
 
 ## Project Highlights
+
 This project addresses real-world business challenges through innovative machine learning solutions:
 
 - **Handling Seasonal Patterns**: Engineered features to capture seasonal sales trends and cyclical patterns, enabling accurate predictions across different time periods
@@ -37,33 +34,24 @@ This project addresses real-world business challenges through innovative machine
 ## Demo
 <!-- Project Demo Section -->
 <!-- Add your demo GIF or screenshots here -->
-<!-- Example:
-![Sales Forecasting Demo](path/to/demo.gif)
-
-### Screenshots
-![Data Visualization](path/to/screenshot1.png)
-*Visualization of sales trends and patterns*
-
-![Model Performance](path/to/screenshot2.png)
-*Model accuracy and prediction results*
--->
-
-*Demo GIF and screenshots coming soon! Stay tuned for visual walkthroughs of the forecasting system in action.*
 
 ## Skills
-- **Python Programming**: Core development language
-- **Machine Learning**: Scikit-learn for model building
-- **Data Analysis**: Pandas, NumPy for data manipulation
+
+- **Programming**: Python (NumPy, Pandas, Scikit-learn)
+- **Machine Learning**: Regression algorithms, model optimization
 - **Data Visualization**: Matplotlib, Seaborn for insights
 - **Feature Engineering**: Creating predictive features from raw data
 - **Model Evaluation**: Cross-validation, metrics analysis
 
 ## Installation
+
 ### Prerequisites
+
 - Python 3.8 or higher
 - pip package manager
 
 ### Setup Instructions
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/TejaVamshidharReddy/Sales-Forecasting-ML.git
@@ -76,13 +64,17 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
 ### Running the Prediction Model
+
 ```bash
 python src/main.py
 ```
 
 ### Using Custom Data
+
 Replace the sample data in `data/sample_sales_data.csv` with your own sales data. Ensure your CSV file contains the following columns:
+
 - `date`: Date of the sale
 - `product_id`: Product identifier
 - `quantity`: Number of units sold
@@ -90,6 +82,7 @@ Replace the sample data in `data/sample_sales_data.csv` with your own sales data
 - `revenue`: Total revenue (quantity × price)
 
 ## Example Input/Output
+
 ### Input (sample_sales_data.csv)
 ```csv
 date,product_id,quantity,price,revenue
@@ -104,6 +97,7 @@ Product P001: $1,425.30 (±5% confidence interval)
 ```
 
 ## Contact / Let's Connect
+
 I'm always excited to discuss machine learning, data science projects, and collaboration opportunities!
 
 **Connect with me on LinkedIn**: [Teja Vamshidhar Reddy Chilukala](https://www.linkedin.com/in/tejavamshi/)
@@ -115,5 +109,4 @@ Feel free to reach out for:
 - Questions about this project
 
 ---
-
 *Made with ❤️ by Teja Vamshidhar Reddy*
