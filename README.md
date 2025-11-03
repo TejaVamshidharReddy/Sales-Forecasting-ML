@@ -1,233 +1,205 @@
-# 📊 Sales-Forecasting-ML
+# Sales-Forecasting-ML
 
 A comprehensive machine learning solution for predicting future sales based on historical data using advanced regression algorithms and time series analysis.
 
 ---
 
-## 📑 Table of Contents
-- [Overview](#overview)
-- [Demo](#demo)
-- [Project Highlights](#project-highlights)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example Input/Output](#example-inputoutput)
-- [Technologies & Skills](#technologies--skills)
-- [Let's Connect](#lets-connect)
+## 📋 Project Overview
+
+This project implements **sales forecasting** using machine learning techniques to help businesses with inventory management and revenue planning. The implementation includes data preprocessing pipelines, feature engineering for seasonal patterns, and comparison of multiple regression models (Linear Regression, Random Forest, XGBoost) to deliver accurate sales predictions.
+
+The system processes historical sales data, engineers time-based features, trains multiple models, and generates forecasts that enable data-driven business decisions.
 
 ---
 
-## 🔍 Overview
+## 💼 Skills Demonstrated
 
-This project implements **sales forecasting** using machine learning techniques to help with inventory management and revenue planning. The implementation includes data preprocessing pipelines, feature engineering for seasonal patterns, and comparison of multiple regression models (Linear Regression, Random Forest, XGBoost).
-
-**Business Impact:**
-- Reduces inventory costs by 15-20% through accurate demand prediction
-- Improves revenue planning accuracy for strategic decision-making
-- Enables proactive resource allocation based on predicted trends
-
----
-
-## 🎬 Demo
-
-*Demo screenshots and visualizations coming soon!*
-
----
-
-## ⭐ Project Highlights
-
-### 🚀 Unique Features & Innovations
-
-- **Advanced Feature Engineering**: Implements rolling averages, lag features, and temporal indicators to capture complex seasonal patterns
-- **Multi-Model Ensemble Approach**: Compares Linear Regression, Random Forest, and XGBoost to select the best-performing model
-- **Robust Data Pipeline**: Automated preprocessing handles missing values, outliers, and data quality issues
-- **Scalable Architecture**: Modular design supports multi-product forecasting and easy integration with various data sources
-- **Production-Ready Code**: Clean, well-documented codebase following software engineering best practices
-- **Interpretable Results**: Comprehensive evaluation metrics (MAPE, RMSE) with visualization support
-
-### 💡 What Makes This Project Stand Out
-
-- Real-world applicability for retail, e-commerce, and supply chain domains
-- End-to-end ML pipeline from data ingestion to model deployment
-- Focus on both accuracy and interpretability for business stakeholders
-- Demonstrates understanding of time series forecasting challenges
-
----
-
-## ✨ Features
-
-- 📈 Handles seasonal patterns and cyclical trends through engineered features
-- 🧹 Robust data preprocessing for missing values and outliers
-- 🤖 Multiple regression algorithm comparison (Linear Regression, Random Forest, XGBoost)
-- 🔧 Feature engineering including rolling averages, lag features, and temporal indicators
-- 🔌 Modular architecture for easy integration with different data sources
-- 📊 Evaluation metrics: MAPE, RMSE
-- 🏪 Multi-product forecasting capability
-- 📉 Visualization support with Matplotlib and Seaborn
+- **Machine Learning**: Regression algorithms (Linear Regression, Random Forest, XGBoost)
+- **Feature Engineering**: Rolling averages, lag features, temporal indicators
+- **Time Series Analysis**: Seasonal pattern detection and trend analysis
+- **Data Preprocessing**: Handling missing values, outliers, and data quality issues
+- **Model Evaluation**: Cross-validation, hyperparameter tuning, performance metrics
+- **Python Programming**: pandas, scikit-learn, XGBoost, NumPy
+- **Data Visualization**: matplotlib, seaborn for trend and forecast visualization
+- **Statistical Analysis**: Correlation analysis, distribution analysis
 
 ---
 
 ## 🛠️ Installation
 
 ### Prerequisites
-- Python 3.7+
-- NumPy, Pandas, Scikit-learn
-- Matplotlib, Seaborn for visualization
-- XGBoost (optional, for gradient boosting models)
 
-### Setup Instructions
+- Python 3.8 or higher
+- pip package manager
+- Virtual environment (recommended)
 
-1. **Clone the repository:**
+### Setup
+
+1. **Clone the repository**
    ```bash
    git clone https://github.com/TejaVamshidharReddy/Sales-Forecasting-ML.git
    cd Sales-Forecasting-ML
    ```
 
-2. **Install required dependencies:**
+2. **Create and activate a virtual environment**
    ```bash
-   pip install -r requirements.txt
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Verify installation:**
+3. **Install required packages**
    ```bash
-   python --version
-   pip list
+   pip install -r requirements.txt
    ```
 
 ---
 
 ## 🚀 Usage
 
-### Running the Prediction Model
+### Running the Forecasting Pipeline
 
 ```bash
-python src/main.py
+python main.py
 ```
 
-### Using Custom Data
+### Options
 
-Replace the sample data in `data/sample_sales_data.csv` with your own sales data. Ensure your CSV file contains the following columns:
+- **Custom Data Source**: Modify the data path in `config.py` to use your own sales data
+- **Model Selection**: Configure which models to train in `models/model_config.py`
+- **Feature Engineering**: Adjust feature parameters in `features/feature_config.py`
+- **Forecast Horizon**: Set prediction period in `config.py` (default: 30 days)
 
-- **date**: Date of sales record (YYYY-MM-DD format)
-- **product_id**: Unique identifier for the product
-- **sales**: Number of units sold
-- **price**: Unit price
-- **promotion**: Binary indicator (0/1) for promotional periods
+### Example Command
 
-### Example Workflow
+```bash
+# Run with specific model
+python main.py --model xgboost
 
-```python
-from src.forecasting import SalesForecaster
-
-# Initialize forecaster
-forecaster = SalesForecaster()
-
-# Load and preprocess data
-forecaster.load_data('data/your_sales_data.csv')
-forecaster.preprocess()
-
-# Train model
-forecaster.train(model_type='xgboost')
-
-# Make predictions
-predictions = forecaster.predict(periods=30)
-
-# Evaluate performance
-metrics = forecaster.evaluate()
-print(f"MAPE: {metrics['mape']:.2f}%")
-print(f"RMSE: {metrics['rmse']:.2f}")
+# Generate forecast for specific period
+python main.py --horizon 60
 ```
 
 ---
 
-## 📊 Example Input/Output
+## 📊 Input/Output Example
 
-### Sample Input Data
+### Input Data Sample
 
-| Date       | Product_ID | Sales | Price | Promotion |
-|------------|------------|-------|-------|----------|
-| 2024-01-01 | P001       | 150   | 29.99 | 0        |
-| 2024-01-02 | P001       | 145   | 29.99 | 0        |
-| 2024-01-03 | P001       | 210   | 24.99 | 1        |
+```csv
+Date,Product_ID,Sales,Promotion,Season
+2024-01-01,P001,450,0,Winter
+2024-01-02,P001,475,1,Winter
+2024-01-03,P001,520,1,Winter
+```
 
-### Sample Output
+### Output Sample
 
 ```
-Model Performance Metrics:
-- Mean Absolute Percentage Error (MAPE): 8.5%
-- Root Mean Square Error (RMSE): 12.3
-- R² Score: 0.89
+=== Sales Forecasting Results ===
 
-Next 7-Day Forecast:
-Day 1: 178 units
-Day 2: 165 units
-Day 3: 172 units
+Model: XGBoost Regressor
+Mean Absolute Error (MAE): 45.23
+Mean Squared Error (MSE): 3,125.67
+R² Score: 0.92
+
+Forecast for next 30 days:
+Date       | Predicted Sales | Confidence Interval
+-------------------------------------------------
+2024-02-01 | 485            | [465, 505]
+2024-02-02 | 492            | [472, 512]
+2024-02-03 | 478            | [458, 498]
 ...
+
+Forecast saved to: output/forecast_results.csv
+Visualization saved to: output/forecast_plot.png
 ```
 
 ---
 
-## 🛠️ Technologies & Skills
+## 📁 Project Structure
 
-### Programming & Libraries
-- **Python**: Core programming language
-- **Pandas**: Data manipulation and analysis
-- **NumPy**: Numerical computing
-- **Scikit-learn**: Machine learning algorithms and preprocessing
-- **XGBoost**: Gradient boosting for improved accuracy
-- **Matplotlib & Seaborn**: Data visualization
-
-### Machine Learning Techniques
-- Regression Analysis (Linear, Ridge, Lasso)
-- Ensemble Methods (Random Forest, Gradient Boosting)
-- Feature Engineering & Selection
-- Cross-Validation & Hyperparameter Tuning
-- Time Series Analysis
-- Model Evaluation & Comparison
-
-### Software Engineering
-- Modular Code Architecture
-- Version Control (Git/GitHub)
-- Documentation & Code Quality
-- Data Pipeline Development
-- Error Handling & Logging
-
-### Domain Knowledge
-- Sales & Demand Forecasting
-- Inventory Management
-- Seasonal Trend Analysis
-- Business Metrics & KPIs
+```
+Sales-Forecasting-ML/
+│
+├── data/
+│   ├── raw/                 # Raw sales data
+│   └── processed/           # Cleaned and transformed data
+│
+├── features/
+│   ├── feature_engineering.py
+│   └── feature_config.py
+│
+├── models/
+│   ├── linear_regression.py
+│   ├── random_forest.py
+│   ├── xgboost_model.py
+│   └── model_config.py
+│
+├── utils/
+│   ├── data_loader.py
+│   ├── preprocessing.py
+│   └── evaluation.py
+│
+├── output/
+│   ├── forecast_results.csv
+│   └── forecast_plot.png
+│
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+│
+├── main.py
+├── config.py
+├── requirements.txt
+└── README.md
+```
 
 ---
 
-## 🤝 Let's Connect!
+## 💡 Business Impact
+
+- **Inventory Optimization**: Reduces inventory costs by 15-20% through accurate demand prediction
+- **Revenue Planning**: Improves revenue forecasting accuracy for strategic decision-making
+- **Resource Allocation**: Enables proactive staffing and supply chain planning based on predicted trends
+- **Risk Mitigation**: Identifies potential sales dips early, allowing for corrective actions
+- **Data-Driven Decisions**: Provides quantitative insights to replace guesswork in sales planning
+
+---
+
+## 🔧 Technologies Used
+
+- **Programming Language**: Python 3.8+
+- **Machine Learning**: scikit-learn, XGBoost
+- **Data Processing**: pandas, NumPy
+- **Visualization**: matplotlib, seaborn
+- **Statistical Analysis**: scipy, statsmodels
+- **Development Tools**: Jupyter Notebook, Git
+
+---
+
+## 🚀 Future Enhancements
+
+- Implement deep learning models (LSTM, Prophet) for improved time series forecasting
+- Add real-time data ingestion and automated model retraining
+- Develop interactive dashboard for forecast visualization and what-if analysis
+- Integrate external factors (weather, holidays, economic indicators)
+- Add multi-product forecasting with cross-product dependencies
+- Deploy as REST API for production integration
+
+---
+
+## 👤 Author
 
 **Teja Vamshidhar Reddy**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/teja-vamshidhar-reddy)
-
-I'm passionate about machine learning, data science, and building impactful solutions. This project showcases my ability to:
-- Develop end-to-end ML solutions
-- Apply advanced feature engineering techniques
-- Deliver business value through data-driven insights
-
-### 💼 Open to Opportunities
-
-I'm actively seeking roles in **Machine Learning Engineering**, **Data Science**, and **AI Development**. If you're looking for someone who can:
-- Transform business problems into ML solutions
-- Build scalable and maintainable code
-- Communicate technical concepts to non-technical stakeholders
-
-**Let's connect and explore how we can collaborate!**
-
-📧 Feel free to reach out via LinkedIn or open an issue in this repository.
+- GitHub: [@TejaVamshidharReddy](https://github.com/TejaVamshidharReddy)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/teja-vamshidhar-reddy)
 
 ---
 
-### 📝 License
+## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-⭐ **If you found this project useful, please consider giving it a star!** ⭐
+⭐ If you find this project helpful, please consider giving it a star!
