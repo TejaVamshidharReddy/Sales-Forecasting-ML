@@ -185,7 +185,7 @@ Sales-Forecasting-ML/
 ## Author
 **Teja Vamshidhar Reddy**
 - GitHub: [@TejaVamshidharReddy](https://github.com/TejaVamshidharReddy)
-- LinkedIn: [Connect with me](www.linkedin.com/in/tejavamshi)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/tejavamshi/)
 
 ---
 
