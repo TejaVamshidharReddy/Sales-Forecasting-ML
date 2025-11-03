@@ -1,54 +1,27 @@
 # Sales-Forecasting-ML
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Project Highlights](#project-highlights)
-- [Demo](#demo)
-- [Skills](#skills)
-- [Installation](#installation)
-  - [Prerequisites](#prerequisites)
-  - [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-  - [Running the Prediction Model](#running-the-prediction-model)
-  - [Using Custom Data](#using-custom-data)
-- [Example Input/Output](#example-inputoutput)
-- [Contact / Let's Connect](#contact--lets-connect)
+A machine learning project for predicting future sales based on historical data using regression algorithms.
 
 ## Overview
 
-Sales-Forecasting-ML is a machine learning project designed to predict future sales based on historical data. This project leverages advanced regression algorithms to help businesses make data-driven decisions, optimize inventory management, and improve revenue planning.
+This project implements sales forecasting using machine learning techniques to help with inventory management and revenue planning. The implementation includes data preprocessing pipelines, feature engineering for seasonal patterns, and comparison of multiple regression models (Linear Regression, Random Forest, XGBoost).
 
-## Project Highlights
+## Features
 
-This project addresses real-world business challenges through innovative machine learning solutions:
-
-- **Handling Seasonal Patterns**: Engineered features to capture seasonal sales trends and cyclical patterns, enabling accurate predictions across different time periods
-- **Data Quality Management**: Implemented robust data preprocessing pipelines to handle missing values, outliers, and inconsistent data formats commonly found in real business datasets
-- **Multiple Algorithm Comparison**: Systematically evaluated various regression models (Linear Regression, Random Forest, XGBoost) to identify the best-performing approach for sales forecasting
-- **Feature Engineering Excellence**: Created derived features including rolling averages, lag features, and temporal indicators to enhance model accuracy
-- **Scalable Architecture**: Designed modular code structure that allows easy integration with different data sources and deployment scenarios
-- **Business-Driven Metrics**: Focused on interpretable evaluation metrics (MAPE, RMSE) that directly translate to business impact and ROI
-- **Real-time Prediction Capability**: Built efficient inference pipeline capable of generating forecasts for multiple products simultaneously
-
-## Demo
-<!-- Project Demo Section -->
-<!-- Add your demo GIF or screenshots here -->
-
-## Skills
-
-- **Programming**: Python (NumPy, Pandas, Scikit-learn)
-- **Machine Learning**: Regression algorithms, model optimization
-- **Data Visualization**: Matplotlib, Seaborn for insights
-- **Feature Engineering**: Creating predictive features from raw data
-- **Model Evaluation**: Cross-validation, metrics analysis
+- Handles seasonal patterns and cyclical trends through engineered features
+- Robust data preprocessing for missing values and outliers
+- Multiple regression algorithm comparison (Linear Regression, Random Forest, XGBoost)
+- Feature engineering including rolling averages, lag features, and temporal indicators
+- Modular architecture for easy integration with different data sources
+- Evaluation metrics: MAPE, RMSE
+- Multi-product forecasting capability
 
 ## Installation
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- pip package manager
+- Python (NumPy, Pandas, Scikit-learn)
+- Matplotlib, Seaborn for visualization
 
 ### Setup Instructions
 
@@ -95,18 +68,3 @@ date,product_id,quantity,price,revenue
 Predicted Sales for Next Week:
 Product P001: $1,425.30 (±5% confidence interval)
 ```
-
-## Contact / Let's Connect
-
-I'm always excited to discuss machine learning, data science projects, and collaboration opportunities!
-
-**Connect with me on LinkedIn**: [Teja Vamshidhar Reddy Chilukala](https://www.linkedin.com/in/tejavamshi/)
-
-Feel free to reach out for:
-- Project collaborations
-- Technical discussions
-- Job opportunities
-- Questions about this project
-
----
-*Made with ❤️ by Teja Vamshidhar Reddy*
